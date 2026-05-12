@@ -5,6 +5,58 @@ All notable changes to OpenConstructionERP are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.0](https://github.com/datadrivenconstruction/OpenConstructionERP/compare/v2.6.11...v2.7.0) (2026-05-12)
+
+
+### Features
+
+* **boq:** formula engine — pos(), $VAR, if(), unit converters, cycle detection ([ee680e1](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/ee680e1f16429a3deef4daf5106e75c7cf095c46))
+* **boq:** resource type chips translated across all 21 locales ([54b285a](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/54b285adac41de7729058b3da66367f7fcf74d8b))
+* **boq:** variant re-pick on resource rows + provenance markers ([5f612a8](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/5f612a8c623ee68aa3b1d9a6afa6c7003e255ef6))
+* **documents:** password-protected share links ([10f09ed](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/10f09ed5d57a2a7b82898a2bc69a8bf671ea945f))
+* **gaeb:** deep audit + 8 fixes — encoding, units, hierarchy, paragraphs, version ([4ed9fee](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/4ed9feede2b996bfdb273d160b43f2d88852d077))
+* **projects:** photos tab on ProjectDetailPage ([a252127](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/a252127e3b4664ef641443deee9d0352a21d67f5))
+* **projects:** team strip on ProjectDetailPage ([b4bf9de](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/b4bf9dee4b2b44bf19a0a7c3df126541f6c772fa))
+* v2.6.15 — provenance markers across exporters and runtime artifacts ([e26a6c6](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/e26a6c63abcd3aa69378fd933c83c0447b0e0ac2))
+* v2.6.16 — CWICR variants UI + RBAC [#101](https://github.com/datadrivenconstruction/OpenConstructionERP/issues/101) fix + curated demos ([8506ffd](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/8506ffd94e06ecb45c1bb5e2494c62a45b5df1c7))
+* v2.6.17 — BOQ unit catalogue + resource-row UX bundle ([739d6a9](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/739d6a99d0816a4e5bdf51ad5d59a064519186ea))
+* v2.6.18 — BOQ resource calc fix + position/resource alignment ([a5f31b7](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/a5f31b7233ea44afdc80eaa7b55833b1a3cd7002))
+* v2.6.20 — IFC black fix + BOQ row alignment + resource formulas + Gemini 2.5 ([4c5e68e](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/4c5e68e1ff622bff028174e01611c91ce5638cc3)), closes [#103](https://github.com/datadrivenconstruction/OpenConstructionERP/issues/103)
+* v2.6.21 — server-side custom-units + resource-name race fix ([8436673](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/8436673f666ba4aa7e36d7e1f831865d4cf37991))
+* v2.6.22 — BIM viewer error visibility + DWG/DGN install fix + demo login fix ([b1c6b73](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/b1c6b73d5621091242468e9948afa224bffcb503))
+* v2.6.23 — CWICR 30 regions + BIM converter health verify + variants polish + BOQ edit lag fix ([9a7d9a0](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/9a7d9a03bb4cf9fc7aecf71b8f626042c98e91f3))
+* v2.6.24 — RBAC fix unblocks BOQ position add + Phase A presets + Phase B variables ([5fae3f4](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/5fae3f4c3e5e1feadf27ebf89f73a1cdf65583d5))
+* v2.6.25 — per-resource CWICR variants + VariantPicker UX redesign ([ccafe53](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/ccafe53def0d1464ffda32716bb23754dfd1b1c1))
+* v2.6.28 + BIM persistence redesign + CWICR translations ([ea9a005](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/ea9a00592d9a1cb4986ebe7ecd3303ee93605551))
+
+
+### Bug Fixes
+
+* **boq:** variant picker currency falls back to region currency, not USD ([d9fef52](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/d9fef521bbaf0a5f2ea0c1d1a0327b54daa08415))
+* restore useFxRatesStore (lost during rebase) ([48e4a2f](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/48e4a2ff16c5944ef87895a67d636f80b601dc07))
+* v2.6.19 — resource name/qty alignment (remove double-padding from Inline*Input wrappers) ([e2dc0cf](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/e2dc0cfc0f637448bacf5b9b8f6d5f7cfe530308))
+* v2.6.26 — ton unit alias + region-key flags + converter panel dismiss ([83c74bc](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/83c74bc671a47f221739e8272cafca67aff70fa9))
+* v2.6.26 follow-up — kill the "first 2 letters of region" flag fallback ([adafb7e](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/adafb7e58fadf6c1203d6cb60f3f39aae35ed098))
+* v2.6.27 — Windows-safe SVG flags + CWICR download diagnostics ([1338a29](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/1338a29f98047e36379fb0393318f2abb33fd303))
+* **v2.6.29:** LANG-AUTODETECT + AUTO-PROJECT + DUAL-UPLOAD-PDF ([63e3ece](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/63e3ecedae73a56ab28862427d05e641153e3693))
+
+
+### Code Refactoring
+
+* **assemblies:** compact layout + DashboardBackdrop ([e64a07e](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/e64a07edcd9d5c02b6bd3d7dfea9e03c986c8e44))
+* **match-elements:** compact layout — single-row hero + 3-col status grid + 2-col steps ([82775aa](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/82775aa2a55d3a606045fb0bf345d486aace4d5b))
+
+
+### Documentation
+
+* **adr:** ADR-003 vector match service architecture ([e7f7c09](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/e7f7c095966d25e7920e8561c9884c2d698eee05))
+* **readme:** refresh badges + What's New for v2.7.0 ([455e9e8](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/455e9e85a179d4f294e8505fb678da9776adbb25))
+
+
+### Miscellaneous
+
+* gitignore qa-report/ (qa-crawler local artifacts) ([a602761](https://github.com/datadrivenconstruction/OpenConstructionERP/commit/a60276119fe38d6903f180c0b1d38c7f1e678180))
+
 ## [3.0.0] — 2026-05-12 · v3 milestone
 
 Consolidates the entire v2.x line (100+ patch releases between 2026-04-20 and 2026-05-12) into a stable v3.0.0 milestone. Same codebase as v2.9.42 — new version label, refreshed metadata, framed as the v3 release.

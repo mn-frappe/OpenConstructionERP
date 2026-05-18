@@ -149,11 +149,21 @@ function resolveInitialLanguage(): string {
     // localStorage unavailable — fall through.
   }
 
-  // 3. Browser locale (strip region: "de-CH" → "de").
+  // 3. Host-level default for dedicated localized deployments.
+  try {
+    const hostname = window.location.hostname.toLowerCase();
+    if (hostname === 'frappe.mn' || hostname.endsWith('.frappe.mn')) {
+      if (isValid('mn')) return 'mn';
+    }
+  } catch {
+    // hostname access failure — fall through.
+  }
+
+  // 4. Browser locale (strip region: "de-CH" → "de").
   const browserLang = (navigator.language || 'en').split('-')[0];
   if (isValid(browserLang)) return browserLang;
 
-  // 4. Final fallback.
+  // 5. Final fallback.
   return 'en';
 }
 

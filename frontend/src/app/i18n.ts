@@ -150,10 +150,11 @@ function resolveInitialLanguage(): string {
   }
 
   // 3. Host-level default for dedicated localized deployments.
+  // Any .mn TLD domain defaults to Mongolian.
   try {
     const hostname = window.location.hostname.toLowerCase();
-    if (hostname === 'frappe.mn' || hostname.endsWith('.frappe.mn')) {
-      if (isValid('mn')) return 'mn';
+    if ((hostname.endsWith('.mn') || hostname === 'mn') && isValid('mn')) {
+      return 'mn';
     }
   } catch {
     // hostname access failure — fall through.
